@@ -1,0 +1,22 @@
+services:
+  health-checker:
+    # Build the Docker image from the Dockerfile in the current directory
+    build: .
+    container_name: health-checker-app
+    ports:
+      # Map port 3000 on the host to port 3000 in the container
+      - "3000:3000"
+    environment:
+      # Set the environment for the container, which controls the default cron schedule.
+      # Change this to 'production' for standard hourly checks.
+      - NODE_ENV=development
+    env_file:
+      # Load environment variables from the .env file
+      - .env
+    volumes:
+      # Persist the status and log files on the host machine.
+      # This ensures data is not lost when the container is stopped or restarted.
+      - ./health-status.json:/app/health-status.json
+      - ./health-events.log:/app/health-events.log
+    # Restart the container automatically unless it is explicitly stopped
+    restart: unless-stopped

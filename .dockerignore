@@ -1,0 +1,22 @@
+
+# Exclude files and directories from the Docker build context
+# to speed up the build and create smaller images.
+
+# Dependencies are installed in the container
+node_modules
+npm-debug.log
+
+# Docker-related files are not needed inside the image
+Dockerfile
+docker-compose.yml
+
+# The .env file should not be included in the image for security reasons.
+# It is loaded via the docker-compose 'env_file' directive.
+.env
+
+# Git directory
+.git
+
+# Persistent data files that will be mounted as volumes
+health-status.json
+health-events.log
