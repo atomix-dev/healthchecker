@@ -51,7 +51,7 @@ Before running the application, you need to set up your environment variables.
 # .env file
 
 # Comma-separated list of URLs to check
-TARGET_URLS=[https://google.com/404,https://api.github.com/](https://google.com/404,https://api.github.com/)
+TARGET_URLS=https://google.com/404,https://api.github.com/
 
 # --- Cron & Environment Configuration ---
 # Set to 'development' for 5-second checks, or 'production' for hourly checks.
