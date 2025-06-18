@@ -68,16 +68,17 @@ EMAIL_SERVICE=gmail
 EMAIL_USER=your-email@gmail.com
 EMAIL_PASS=your-gmail-app-password
 EMAIL_RECIPIENT=recipient-email@example.com
+```
 
 2. Running the Application
 Option A: Running Locally with Node.js
 Install Dependencies:
 
-npm install
+`npm install`
 
 Start the Server:
 
-npm start
+`npm start`
 
 The application will be running at http://localhost:3000.
 
@@ -86,13 +87,13 @@ This is the recommended method for production and isolated development.
 
 Build and Run the Container:
 
-docker-compose up --build -d
+`docker-compose up --build -d`
 
 The -d flag runs the container in detached mode.
 
 Check the Logs:
 
-docker-compose logs -f
+`docker-compose logs -f`
 
 The application will be running and accessible at http://localhost:3000. The health-status.json and health-events.log files will be created in your project directory on the host machine.
 
@@ -101,15 +102,15 @@ Once the application is running, you can use the following endpoints:
 
 Get Current Status: Returns a JSON object with the latest status of all monitored services.
 
-http://localhost:3000/health
+`http://localhost:3000/health`
 
 Get Historical Log: Returns the plain text log of all status change events.
 
-http://localhost:3000/health/history
+`http://localhost:3000/health/history`
 
 Stopping the Application
 Local: Press Ctrl + C in the terminal.
 
 Docker Compose:
 
-docker-compose down
+`docker-compose down`
