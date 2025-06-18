@@ -18,7 +18,7 @@ A simple, containerized REST API built with Node.js and Express that periodicall
 
 ## Project Structure
 
-
+```
 .
 ├── .dockerignore      # Specifies files to ignore in the Docker build
 ├── .env               # Environment variable configurations (you must create this)
@@ -27,7 +27,7 @@ A simple, containerized REST API built with Node.js and Express that periodicall
 ├── index.js           # Main application logic
 ├── package.json       # Project dependencies and scripts
 └── README.md          # This file
-
+```
 
 ---
 
